@@ -1,14 +1,14 @@
 using DG.Tweening;
 using UnityEngine;
 
-public class Move : MonoBehaviour
+public class Rotate : MonoBehaviour
 {
 	[SerializeField][Min(0)] private float _time = 3;
-	[SerializeField] private Vector3 _targetPosition;
+	[SerializeField] private Vector3 _targetRotation;
 
 	private void Start()
 	{
-		transform.DOMove(_targetPosition, _time).SetLoops(-1, LoopType.Restart);
+		transform.DORotate(_targetRotation, _time).SetLoops(-1, LoopType.Restart);
 	}
 
 	private void OnDestroy()
